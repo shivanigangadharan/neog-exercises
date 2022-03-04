@@ -18,3 +18,20 @@ function fakeFetch(msg, shouldReject) {
 fakeFetch("Hi there!", false)
     .then((res) => console.log("res = ", res))
     .catch((err) => console.log("err = ", err));
+
+
+//using async await
+const printData = async (msg) => {
+    const data = await fakeFetch(msg, true);
+};
+
+const runFunction = async () => {
+    try {
+        await printData("We couldn't process your request.");
+    } catch (e) {
+        console.log(e);
+    } finally {
+        console.log("Thanks for your patience.");
+    }
+};
+runFunction();
