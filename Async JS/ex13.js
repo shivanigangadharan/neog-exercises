@@ -24,3 +24,21 @@ const getServerLength = (msg) => {
 };
 
 getServerLength("Hello");
+
+
+//doubt : check is this correct + why can't we return the length instead of consoling it in the async func itself?
+//using async await
+const getServerLength = async (msg) => {
+    try {
+        const res = await fakeFetch(msg);
+        console.log(res.length);
+    }
+    catch (e) {
+        console.log("Error : ", e);
+    }
+    finally {
+        console.log("Thank you.");
+    }
+};
+
+getServerLength("Hello");

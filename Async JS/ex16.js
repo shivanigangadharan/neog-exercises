@@ -14,9 +14,15 @@ function fakeFetch(msg, shouldReject) {
 }
 
 const getData = async (msg1, msg2) => {
-    const data1 = await fakeFetch(msg1);
-    const data2 = await fakeFetch(msg2);
-    console.log("Msg 1 :", data1, "Msg 2:", data2);
+    try {
+        const data1 = await fakeFetch(msg1);
+        const data2 = await fakeFetch(msg2);
+        console.log("Msg 1 :", data1, "Msg 2:", data2);
+    }
+    catch (e) {
+        console.log(e);
+    }
+    finally { console.log("Thanks."); }
 };
 
 getData("Shivani", "Gangadharan");

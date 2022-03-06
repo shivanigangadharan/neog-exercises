@@ -14,8 +14,16 @@ function fakeFetch(msg, shouldReject) {
 }
 
 const getData = async (msg) => {
-    const data = await fakeFetch(msg);
-    console.log(data);
+    try {
+        const data = await fakeFetch(msg);
+        console.log(data);
+    }
+    catch (e) {
+        console.log('error :', e);
+    }
+    finally {
+        console.log("Thanks.");
+    }
 };
 
 getData("Hello world.");
