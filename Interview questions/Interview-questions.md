@@ -6,3 +6,4 @@
 2. explain how promise work
 3. explain the different states of promise : pending, fulfill, reject.
 4. What's the syntax of promise consumption?
+5. What is prop drilling? What is ancestor children relationship.
