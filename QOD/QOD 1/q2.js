@@ -1,5 +1,3 @@
-// Given an array, your function should return the length of the array
-
 const findLength = (myArr) => {
     let count = 0;
     myArr.map((ele) => (count += 1));
